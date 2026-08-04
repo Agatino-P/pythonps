@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Current File (with args)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "args": "${input:scriptArgs}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Current File (stop at first line)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": true,
+      "justMyCode": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "scriptArgs",
+      "type": "promptString",
+      "description": "Arguments to pass to the script (space-separated)",
+      "default": ""
+    }
+  ]
+}

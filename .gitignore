@@ -142,9 +142,17 @@ cython_debug/
 
 # IDEs / editors
 .idea/
-.vscode/
 *.swp
 *.swo
+
+# VS Code: ignore everything except shared team config
+# NOTE: must be `.vscode/*`, not `.vscode/` — git cannot re-include a file
+# whose parent *directory* is excluded, so the `!` lines below would be dead.
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/extensions.json
 
 # macOS
 .DS_Store
